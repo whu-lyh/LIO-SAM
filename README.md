@@ -1,11 +1,9 @@
-# LIO-SAM-DetailedNote
-LIO-SAM源码详细注释，3D SLAM融合激光、IMU、GPS，因子图优化。
+# LIO-SAM
+将官方的LIO-SAM和smilefacehh的注释版进行了融合，统一注释和官方更新。
 
-LIO-SAM的代码十分轻量，只有四个cpp文件，很值得读一读呢。
+master分支就是官方原版
 
-关于LIO-SAM的论文解读，网上已经有很多文章啦，同系列的LOAM、A-LOAM、LEGO-LOAM等，在网上都可以找到相关的解读文章。所以本文旨在对源代码进行阅读学习，积累一些工程上的经验。这里记录下来，希望可以帮到有需要的同学，如有错误的地方，请您批评指正。
-
-:) 如果对您有帮助，帮我点个star呦~
+temp分支就是smilefacehh的注释版
 
 ## 目录（知乎）
 - [LIO-SAM源码解析：准备篇](https://zhuanlan.zhihu.com/p/352039509)
@@ -17,10 +15,10 @@ LIO-SAM的代码十分轻量，只有四个cpp文件，很值得读一读呢。
 ## 整体流程
 
 代码结构图
-![Image](https://github.com/smilefacehh/LIO-SAM-DetailedNote/blob/main/system.png)
+![Image](https://github.com/whu-lyh/LIO-SAM/blob/main/system.png)
 
 因子图
-![Image](https://github.com/smilefacehh/LIO-SAM-DetailedNote/blob/main/factor.png)
+![Image](https://github.com/whu-lyh/LIO-SAM/blob/main/factor.png)
 
 1、激光运动畸变校正。利用当前帧起止时刻之间的IMU数据、IMU里程计数据计算预积分，得到每一时刻的激光点位姿，从而变换到初始时刻激光点坐标系下，实现校正。
 
